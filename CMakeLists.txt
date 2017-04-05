@@ -11,7 +11,7 @@ file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 ExternalProject_Add(yaml_cpp_src
   URL https://github.com/jbeder/yaml-cpp/archive/yaml-cpp-0.5.3.tar.gz
   UPDATE_COMMAND ""
-  PATCH_COMMAND patch -p0 < ${CMAKE_SOURCE_DIR}/extra_version.patch
+  PATCH_COMMAND patch -p0 < ${CMAKE_SOURCE_DIR}/yaml_cpp_catkin/extra_version.patch
   CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${CATKIN_DEVEL_PREFIX} -DBUILD_SHARED_LIBS=ON
 )
 
